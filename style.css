@@ -1,0 +1,33 @@
+/* style.css */
+
+/* 1. 在文件最顶部声明并加载你的字体文件 */
+@font-face {
+  font-family: 'Yousun'; /* 给字体起一个代码中使用的名字 */
+  src: url('yousun.ttf');  /* 引用你文件夹里的字体文件 */
+}
+
+/* 确保 body 元素也使用新字体作为基础 */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    font-family: 'Yousun', sans-serif; 
+}
+
+
+/* 2. 【这是最关键的一步】为中心文字应用新字体 */
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFC0CB;
+    font-size: 50px;
+    text-shadow: 0 0 15px rgba(255, 105, 180, 0.9);
+    pointer-events: none;
+    /* 确保这一行代码存在，它就是用来改变中心文字字体的！ */
+    font-family: 'Yousun', sans-serif; 
+}
